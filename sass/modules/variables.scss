@@ -1,0 +1,55 @@
+/* Colors
+---------------------------------------------------------------------*/
+
+$black  : #222;
+$black90: lighten($black, 10%);
+$black80: lighten($black, 20%);
+$black70: lighten($black, 30%);
+$black60: lighten($black, 40%);
+$black50: lighten($black, 50%);
+$black40: lighten($black, 60%);
+$black30: lighten($black, 70%);
+$black20: lighten($black, 80%);
+$black10: lighten($black, 90%);
+$white: #f9f9f9;
+$red: #c43634;
+
+$link: #3876b6;
+$link-hover: darken($link, 10%);
+$selection-bg: #b3d4fc;
+
+/* Media Queries
+---------------------------------------------------------------------*/
+
+$phone: "screen and (min-width: 20em)";
+$phone-portrait: "screen and (min-width: 20em) and (orientation: portrait)";
+$phone-landscape: "screen and (min-width: 20em) and (orientation: landscape)";
+
+$phablet: "screen and (min-width: 25em)";
+$phablet-portrait: "screen and (min-width: 30em) and (orientation: portrait)";
+$phablet-landscape: "screen and (min-width: 30em) and (orientation: landscape)";
+
+$tablet: "screen and (min-width: 40em)";
+$tablet-portrait: "screen and (min-width: 40em) and (orientation: portrait)";
+$tablet-landscape: "screen and (min-width: 40em) and (orientation: landscape)";
+
+$desktop: "screen and (min-width: 80em)";
+
+
+/* Font Settings
+---------------------------------------------------------------------*/
+
+$font-light: 'light';
+$font-regular: 'regular';
+$font-bold: 'bold';
+
+$base-font-family: $font-regular;
+$temp-line-height: 1.6;
+$base-line-height: $temp-line-height * 1em;
+
+$font-size-mobile: 16px;
+$font-size-phablet: 17px;
+$font-size-tablet: 18px;
+$font-size-desktop: 20px;
+
+$base-font-weight: normal;

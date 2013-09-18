@@ -1,0 +1,53 @@
+$table-cell-padding: .4em;
+$table-cell-padding--compact: .2em;
+$table-gray: #ebebeb;
+$table-lightgray: lighten($table-gray, 5%);
+
+.table{
+	text-align: left;
+
+	thead{
+		border-bottom: solid 2px $table-gray;
+	}
+
+	th,
+	td{
+		padding: $table-cell-padding;
+	}
+
+	td{
+		border-bottom: solid 1px $table-gray;
+	}
+}
+
+.table--compact{
+	th,
+	td{
+		padding: $table-cell-padding--compact;
+	}
+}
+
+.table--striped{
+	tbody{
+		tr:nth-child(2n-1){
+			background: $table-lightgray;
+		}
+	}
+}
+
+.table--bordered{
+	thead{
+		border-top: solid 1px $table-gray;
+	}
+
+	thead,
+	tbody{
+		border-left: solid 1px $table-gray;
+		border-right: solid 1px $table-gray;
+	}
+
+	th + th,
+	td + td{
+		border-left: solid 1px $table-gray;
+	}
+}

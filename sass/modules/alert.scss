@@ -1,0 +1,56 @@
+$alert-padding: 1em;
+$alert-radius: .2em;
+$alert__close-position: .4em;
+
+$alert--success: #dff0d8;
+$alert--info: #d9edf7;
+$alert--warning: #fcf8e3;
+$alert--error: #f2dede;
+
+@mixin alert($color){
+	background: $color;
+	border: solid 1px darken($color, 5%);
+	color: darken($color, 60%);
+
+	.alert__close{
+		color: darken($color, 15%);
+
+		&:hover{
+			color: darken($color, 25%);
+		}
+	}
+}
+
+/*div*/.alert{
+	border-radius: $alert-radius;
+	padding: $alert-padding;
+	position: relative;
+}
+
+.alert--success{
+	@include alert($alert--success);
+}
+
+.alert--info{
+	@include alert($alert--info);
+}
+
+.alert--warning{
+	@include alert($alert--warning);
+}
+
+.alert--error{
+	@include alert($alert--error);
+}
+
+/*button*/.alert__close{
+	background: none;
+	border: none;
+	position: absolute;
+	right: $alert__close-position;
+	top: $alert__close-position;
+}
+
+/*p*/.alert__desc{
+	margin: 0;
+}

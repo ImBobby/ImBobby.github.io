@@ -1,0 +1,23 @@
+@import "variables";
+
+@mixin modular-scale($font-size, $hack){
+	font-size: $font-size;
+	line-height: ($base-line-height/$font-size + $hack);
+	margin: 0 0 ($base-line-height/$font-size + 0em) 0;
+}
+
+@mixin gray-skin($position){
+	background: $black30;
+
+	@if $position == 'bottom' {
+		border-bottom: solid 1px $black40;
+	} @else if $position == 'top' {
+		border-top: solid 1px $black40;
+	} @else if $position == 'left' {
+		border-left: solid 1px $black40;
+	} @else if $position == 'right' {
+		border-right: solid 1px $black40;
+	} @else if $position == 'all' {
+		border: solid 1px $black40;
+	}
+}
